@@ -1,6 +1,6 @@
 [build]
+ functions = "functions"
   publish = "public"
-  functions = "functions"  # Direttorio delle funzioni serverless
 
 [[plugins]]
   package = "@netlify/plugin-functions-install-core"
