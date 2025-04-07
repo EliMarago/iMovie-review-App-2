@@ -2,7 +2,8 @@ const fetch = require("node-fetch");
 
 exports.handler = async function(event, context) {
   const apiKey = process.env.API_KEY; // La tua chiave API è recuperata dalla variabile d'ambiente di Netlify
-  const query = event.queryStringParameters.query || "popular"; // Parametro di ricerca o "popular"
+  const query = event.queryStringParameters?.query || "popular";
+
 
   const url = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${encodeURIComponent(query)}`;
 
